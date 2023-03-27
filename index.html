@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <div>
+      <form id="apikey-form">
+        apikey: <input name="key" /> <input type="submit" />
+      </form>
+    </div>
+
+    <button id="fetch-button">fetch</button>
+
+    <ul>
+      <template x-for="item in $store.pullRequests.pulls">
+        <li x-text="item.number"></li>
+      </template>
+    </ul>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
